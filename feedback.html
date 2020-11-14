@@ -1,54 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Form Tag</title>
-    </head>
-    <body bgcolor="greenyellow">
-        <font color="BLACK">
-       <H1 style="COLOR:BROWN"><center>Personal Details:</center> </H1>
-       <hr color="BLACK">
-        <P>
-        <form>
-            <center><b>NAME:</b> 
-            <input type="text" name="first Name"></center><br> 
-            <center><b>PASSWORD:</b> 
-            <INPUT TYPE="password" NAME="YASHRAJSHUKLA"></center><br>
-                    <center><INPUT TYPE = "RESET" style="background-color:aqua" VALUE ="START OVER"></center> <BR>
-                        <center><b>Email ID:</b>
-                <input type="email" name="email"></center><br> 
-           <center><b> CHOOSE GENDER: </b>
-                <INPUT TYPE="RADIO" NAME="GENDER" VALUE="MALE" CHECKED>MALE
-                <INPUT TYPE="RADIO" NAME="GENDER" VALUE="FEMALE">FEMALE
-                <INPUT TYPE="RADIO" NAME="GENDER" VALUE="OTHER">OTHER<BR></center><br>
-                    <center><b>CONTACT:</b> 
-                        <input type="number" name="number"></center><br> <br>
-        <H1 style="color: brown;"><CENTER>Educational Qualification:</CENTER></H1>
-        <hr color="BLACK"><br>
-          
-        <center><b>DEGREE:</b> 
-            <SELECT style="background-color: hotpink;" NAME="SELECT DEGREE:">
-                <OPTION>UNDERGRADUATE 
-                <OPTION>POSTGRADUATE
-                <OPTION>MASTERS
-                <OPTION>ASOCIATE
-                </SELECT></center><br>
-                
-                <center><b>HOBBIES:</b>
-                    <INPUT TYPE=CHECKBOX NAME= "DANCING" VALUE="DANCING">
-                                DANCING
-                                <INPUT TYPE=CHECKBOX NAME= "SINGING" VALUE="SINGING">
-                                SINGING
-                                <INPUT TYPE=CHECKBOX NAME= "PLAYING CHESS" VALUE="PLAYING CHESS">
-                                PLAYING CHESS</center> <br> 
-                <center><b>Give Feedback and Tech News:</b><br>  
-                    <textarea rows="5" cols="60"></textarea>  </center>
-                 <center>  <input type = "file" name = "fileupload" accept = "image/*" /></center>   <br>          
-                <CENTER><BUTTON TYPE="BUTTON" style="background-color: orange; color: white;
-                padding: 10px 24px;font-size: 16px;;border-radius: 12px;box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);"> <A HREF="1.html">SUBMIT</A> </BUTTON></CENTER> <BR><br><br> 
-               
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact us form validation Using Javascript</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="scripts.js"></script>
+</head>
+<body>
 
-        </form>
-      
-    </p>
-    </body>
+<div class="wrapper">
+  <h2>Give Feedback</h2>
+  <div id="error_message"></div>
+  <form id="myform" onsubmit="return validate();">
+    <div class="input_field">
+        <input type="text" placeholder="Name" id="name">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Subject" id="subject">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Phone" id="phone">
+    </div>
+    <div class="input_field">
+        <input type="text" placeholder="Email" id="email">
+    </div>
+    <div class="input_field">
+        <textarea placeholder="Message" id="message"></textarea>
+    </div>
+    <div class="btn">
+        <input type="submit">
+    </div>
+  </form>
+</div>
+
+</body>
 </html>
